@@ -5,7 +5,7 @@
 
     <parent>
         <artifactId>spring-web</artifactId>
-        <groupId>com.geekbrains</groupId>
+        <groupId>hell.prod</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -14,8 +14,8 @@
     <artifactId>core-service</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -31,13 +31,15 @@
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.1</version>
         </dependency>
+
         <dependency>
-            <groupId>com.geekbrains.web</groupId>
+            <groupId>hell.prod.web</groupId>
             <artifactId>api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
@@ -52,6 +54,12 @@
             <groupId>com.paypal.sdk</groupId>
             <artifactId>checkout-sdk</artifactId>
             <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>hell.prod.web</groupId>
+            <artifactId>api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
