@@ -13,11 +13,8 @@ import java.util.Optional;
 @Component
 @RequiredArgsConstructor
 public class ProductsServiceIntegration {
-    private final RestTemplate restTemplate;
     private final WebClient productServiceWebclient;
 
-    @Value("${integrations.core-service.url}")
-    private String productServiceUrl;
 
     public Optional<ProductDto> findById(Long id) {
         ProductDto productDto = productServiceWebclient.get().uri("/api/v1/products/" + id).retrieve().bodyToMono(ProductDto.class).block();
